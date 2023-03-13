@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>OOP Lab2</title>
+</head>
+<body>
+<h1 style="text-align: center;">Coffee machine<br> </h1>
+Implement a system to manage a coffee preparing and selling machine
+(using <span style="font-weight: bold;">Java Collections</span>). The
+system must meet the following
+requirements.
+<h2>R1: Coffee</h2>
+The coffee machine can distribute several types of coffees. Each
+coffee is characterized by its unique <span
+ style="font-style: italic;">name</span> selling <span
+ style="font-style: italic;">price</span> and products amount used for preparation <span
+            style="font-style: italic;">coffee, milk, water</span> For instance:<br>
+<br>
+<table style="text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;">Coffee<br>
+name<br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold;">Selling<br>
+price</td>
+        <td style="vertical-align: top; font-weight: bold;">Coffee <br>amount</td>
+        <td style="vertical-align: top; font-weight: bold;">Milk <br>amount</td>
+        <td style="vertical-align: top; font-weight: bold;">Water <br>amount</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">Cappuccino<br>
+      </td>
+      <td style="vertical-align: top;">7000<br>
+      </td>
+        <td style="vertical-align: top;">100<br>
+        </td>
+        <td style="vertical-align: top;">100<br>
+        </td>
+        <td style="vertical-align: top;">100<br>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">Espresso<br>
+        </td>
+        <td style="vertical-align: top;">6000<br>
+        </td>
+        <td style="vertical-align: top;">100<br>
+        </td>
+        <td style="vertical-align: top;">0<br>
+        </td>
+        <td style="vertical-align: top;">100<br>
+        </td>
+    </tr>
+    <tr>
+        <td style="vertical-align: top;">Macchiato<br>
+        </td>
+        <td style="vertical-align: top;">7000<br>
+        </td>
+        <td style="vertical-align: top;">100<br>
+        </td>
+        <td style="vertical-align: top;">50<br>
+        </td>
+        <td style="vertical-align: top;">150<br>
+        </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Method <span style="font-weight: bold;">addCoffee()</span> of class <span
+ style="font-weight: bold;">CoffeeMachine</span> let the administrator
+to add the description of a new coffee. To obtain the price of a
+coffee, the method <span style="font-weight: bold;">getPrice()</span>
+is provided. If a price is requested for a coffee name that does not
+exist, the method returns an error code (e.g., -1.0).<span
+ style="font-weight: bold;"></span><br>
+<h2>R2: Payment cards<br>
+</h2>
+The coffee machine works by means of payment cards. Each card is
+characterized by a unique <span style="font-style: italic;">ID</span>
+(integer number) and the available <span style="font-style: italic;">credit.</span>
+For instance:<br>
+<br>
+<table border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; font-weight: bold;">Card ID<br>
+      </td>
+      <td style="vertical-align: top; font-weight: bold;">Credit<br>
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>50000</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>10000</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>7500</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Cards are recharged through the method <span style="font-weight: bold;">rechargeCard()</span>
+of class <span style="font-weight: bold;">CoffeeMachine.</span> If a
+non-existing ID is provided a new card is created, otherwise the
+existing card is recharged. Further, it is possible to query the
+available credit of a given card
+with method <span style="font-weight: bold;">getCredit()</span>. If a
+non-existing card ID is queried, the
+method returns an error code (e.g., -1.0).<br>
+<h2>R3: Machine refill</h2>
+The Coffee machine consist of products for preparing coffee (coffee, milk, water). Administrator can refill products
+    based on name of product and amount. To this aim method <span
+            style="font-weight: bold;">refillProduct()</span> is provided.
+
+<br>
+Given the name of a coffee (e.g., "Cappuccino") it is possible to obtain
+the total number of available products to prepare current coffee by means of
+method <span style="font-weight: bold;">availableCoffee().</span> The
+method counts all products to prepare coffee and return boolean value with result.<br>
+<h2>R4: Selling</h2>
+The coffee machine sells a product by specifying the coffee name and
+the payment card ID in method <span style="font-weight: bold;">sell()</span>.
+The method returns the column where the coffee was picked from. If codes
+are invalid (either coffee or card), the coffee ran out, or credit
+on payment card is not enough to buy the requested item, an error code
+is returned (e.g., -1). On normal behavior, the machine decrements the
+credit on payment card and the quantity of available coffee products for the
+selected column. <span style="font-weight: bold;"><br>
+</span>
+<hr style="width: 100%; height: 2px;"><br>
+<br>
+</body>
+</html>

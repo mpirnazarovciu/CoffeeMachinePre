@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         CoffeeMachine cm = new CoffeeMachine();
-
+        System.out.println("Hello Millat Umidi.");
         cm.addCoffee("Cappuccino", 7000, 100, 100, 100);
         cm.addCoffee("Espresso", 6000, 100, 0, 100);
         cm.addCoffee("Macchiato", 7000, 100, 50, 150);
